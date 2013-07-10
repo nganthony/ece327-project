@@ -55,11 +55,13 @@ wait until rising_edge(i_clock);
 	valid_check := unsigned(valid_shift) srl 1;
 	
 	--s0
-	if i_valid='1' then
+	if i_valid='1' or valid_check(4)='1' then
 		r1<=f;
 		r2<=c;
 		r3<=b;
 		r4<=i;
+                maxi1<=r1;
+                maxi2<=r2;
 	--s1
 	elsif valid_check(1) = '1' then
 		r1<=a;
@@ -82,10 +84,6 @@ wait until rising_edge(i_clock);
 		r2<=h;
 		r3<=g;
 		r4<=f;
-		maxi1<=r1;
-		maxi2<=r2;
-	--s4
-	elsif valid_check(4) = '1' then
 		maxi1<=r1;
 		maxi2<=r2;
 	end if;
