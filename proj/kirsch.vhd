@@ -38,9 +38,9 @@ architecture main of kirsch is
 --signal insertion starts here
 signal column : unsigned(7 downto 0);
 signal row : unsigned(8 downto 0);
-signal a,b,c,d,e,f,g,h,i : signed(8 downto 0);
+signal a,b,c,d,e,f,g,h,i : unsigned(7 downto 0);
 signal input_1,input_2,input_3: std_logic_vector(7 downto 0);
-signal take_input: signed( 8 downto 0);
+signal take_input: unsigned( 7 downto 0);
 signal valid_shift: unsigned(0 to 7);
 
 --Write/Read enable one hot encoding
@@ -99,18 +99,18 @@ row2 : entity work.mem(main)
 			q => input_3);
 
 with wren select
-  c<=signed('0'&input_2)   when s1,
-     signed('0'&input_3)   when s2,
-     signed('0'&input_1)   when s3,
-     "000000000"     when others;
+  c<=unsigned(input_2)   when s1,
+     unsigned(input_3)   when s2,
+     unsigned(input_1)   when s3,
+     "00000000"     when others;
 
 with wren select
-  d<=signed('0'&input_3)    when s1,
-     signed('0'&input_1)    when s2,
-     signed('0'&input_2)    when s3,
-     "000000000"  when others;
+  d<=unsigned(input_3)    when s1,
+     unsigned(input_1)    when s2,
+     unsigned(input_2)    when s3,
+     "00000000"  when others;
 
-take_input <= signed('0'&i_pixel);
+take_input <= unsigned(i_pixel);
 
 -- reset_proc: process begin
 -- wait until rising_edge(i_clock);
