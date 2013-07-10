@@ -89,6 +89,8 @@ wait until rising_edge(i_clock);
 		maxi1<=r1;
 		maxi2<=r2;
 	end if;
+	
+	r5<=r3+r4;
 
 end process;
 
