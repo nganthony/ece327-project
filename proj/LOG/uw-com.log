@@ -10,58 +10,10 @@ Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package NUMERIC_STD
--- Compiling entity mem
--- Compiling entity mem
--- Compiling architecture main of mem
--- Compiling architecture main of mem
--- Compiling package kirsch_synth_pkg
--- Compiling package kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Compiling entity kirsch
--- Compiling entity kirsch
--- Compiling architecture main of kirsch
--- Compiling architecture main of kirsch
--- Loading entity mem
--- Loading entity mem
--- Compiling package string_pkg
--- Compiling package string_pkg
--- Compiling package body string_pkg
--- Compiling package body string_pkg
--- Loading package string_pkg
--- Loading package string_pkg
--- Compiling package kirsch_synth_pkg
--- Compiling package kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Compiling package file_pkg
--- Compiling package file_pkg
--- Compiling package body file_pkg
--- Compiling package body file_pkg
--- Loading package file_pkg
--- Loading package file_pkg
--- Loading package string_pkg
--- Loading package string_pkg
--- Loading package file_pkg
--- Loading package file_pkg
--- Loading package kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Compiling package kirsch_unsynth_pkg
--- Compiling package kirsch_unsynth_pkg
--- Compiling package body kirsch_unsynth_pkg
--- Compiling package body kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Compiling entity kirsch_tb
--- Compiling entity kirsch_tb
--- Compiling architecture main of kirsch_tb
--- Compiling architecture main of kirsch_tb
--- Loading entity kirsch
--- Loading entity kirsch
+-- Compiling entity kirsch_calc
+-- Compiling entity kirsch_calc
+-- Compiling architecture main of kirsch_calc
+-- Compiling architecture main of kirsch_calc
+-- Loading entity eight_bit_max
+-- Loading entity eight_bit_max
  

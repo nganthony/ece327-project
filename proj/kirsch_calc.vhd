@@ -34,8 +34,7 @@ subtype direction is std_logic_vector(2 downto 0);
 	signal r6: unsigned (8 downto 0);
 	signal dir1,dir2: direction;
 
-	
-begin
+begin	
 
 --max module used in stage 1
 stage_1_8bit_maxer: entity work.eight_bit_max(main)
@@ -55,11 +54,13 @@ wait until rising_edge(i_clock);
 	valid_check := unsigned(valid_shift) srl 1;
 	
 	--s0
-	if i_valid='1' then
+	if i_valid='1' or valid_check(4) = '1' then
 		r1<=f;
 		r2<=c;
 		r3<=b;
 		r4<=i;
+		maxi1<=r1;
+		maxi2<=r2;
 	--s1
 	elsif valid_check(1) = '1' then
 		r1<=a;
@@ -82,10 +83,6 @@ wait until rising_edge(i_clock);
 		r2<=h;
 		r3<=g;
 		r4<=f;
-		maxi1<=r1;
-		maxi2<=r2;
-	--s4
-	elsif valid_check(4) = '1' then
 		maxi1<=r1;
 		maxi2<=r2;
 	end if;
