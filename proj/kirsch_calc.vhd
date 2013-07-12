@@ -39,8 +39,10 @@ begin
 
 --max module used in stage 1
 stage_1_8bit_maxer: entity work.eight_bit_max(main)
-			port map(i_src1=>maxi1,
-			i_src2=>maxi2,
+			port map(
+			i_clock=>i_clock,
+			i_src1=>r1,
+			i_src2=>r2,
 			i_dir1=>dir1,
 			i_dir2=>dir2,
 			o_dir=>dir_max,
@@ -52,44 +54,42 @@ stage_1_proc: process
 begin
 wait until rising_edge(i_clock);
 	--go ahead in time
-	valid_check := unsigned(valid_shift) srl 1;
+	--valid_check := unsigned(valid_shift) srl 1;
 	
 	--s0
-	if i_valid='1' or valid_check(4)='1' then
+	if i_valid='1' or valid_shift(4)='1' then
 		r1<=f;
 		r2<=c;
 		r3<=b;
 		r4<=i;
-                maxi1<=r1;
-                maxi2<=r2;
+    --    maxi1<=r1;
+    --    maxi2<=r2;
 	--s1
-	elsif valid_check(1) = '1' then
+	elsif valid_shift(1) = '1' then
 		r1<=a;
 		r2<=d;
 		r3<=b;
 		r4<=c;
-		maxi1<=r1;
-		maxi2<=r2;
+	--	maxi1<=r1;
+	--	maxi2<=r2;
 	--s2
-	elsif valid_check(2) = '1' then
+	elsif valid_shift(2) = '1' then
 		r1<=c;
 		r2<=f;
 		r3<=d;
 		r4<=e;
-		maxi1<=r1;
-		maxi2<=r2;
+	--	maxi1<=r1;
+	--	maxi2<=r2;
 	--s3
-	elsif valid_check(3) = '1' then
+	elsif valid_shift(3) = '1' then
 		r1<=e;
 		r2<=h;
 		r3<=g;
 		r4<=f;
-		maxi1<=r1;
-		maxi2<=r2;
+	--	maxi1<=r1;
+	--	maxi2<=r2;
 	end if;
-	
-	r5<=r3+r4;
-
+	r6<=('0'&r3)+('0'&r4);
 end process;
 
 end architecture;

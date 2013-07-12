@@ -4,6 +4,7 @@ use ieee.numeric_std.all ;
 
 entity eight_bit_max is
   port (
+	i_clock : in std_logic;
     i_src1, i_src2	: in unsigned( 7 downto 0);
 	i_dir1, i_dir2	: in std_logic_vector(2 downto 0);
 	o_dir	: out std_logic_vector(2 downto 0);
@@ -12,16 +13,19 @@ entity eight_bit_max is
 end entity;
 
 architecture main of eight_bit_max is
+signal r1 : unsigned(7 downto 0);
 begin
-	process(i_src1, i_src2)
+	process
 	begin
+	wait until rising_edge(i_clock);
 		if (i_src1 >= i_src2) then
-			o_max<=i_src1;
+			r1<=i_src1;
 			o_dir<=i_dir1;
 		else
-			o_max<=i_src2;
+			r1<=i_src2;
 			o_dir<=i_dir2;
 		end if;
 	end process;
-	
+o_max <= r1;
+
 end architecture;

@@ -30,6 +30,8 @@ Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
 -- Compiling architecture main of kirsch
 -- Loading entity mem
 -- Loading entity mem
+-- Loading entity kirsch_calc
+-- Loading entity kirsch_calc
 -- Compiling package string_pkg
 -- Compiling package string_pkg
 -- Compiling package body string_pkg

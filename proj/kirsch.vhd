@@ -1,4 +1,3 @@
-
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -40,7 +39,7 @@ signal column : unsigned(7 downto 0);
 signal row : unsigned(8 downto 0);
 signal a,b,c,d,e,f,g,h,i : unsigned(7 downto 0);
 signal input_1,input_2,input_3: std_logic_vector(7 downto 0);
-signal take_input: unsigned( 7 downto 0);
+--signal take_input: unsigned( 7 downto 0);
 signal valid_shift: unsigned(0 to 7);
 
 --Write/Read enable one hot encoding
@@ -74,7 +73,7 @@ begin
   
   
 --code insertion starts here  
-  row0 : entity work.mem(main)
+row0 : entity work.mem(main)
 		port map(
 			address => std_logic_vector(column),
 			clock => i_clock,
@@ -98,6 +97,24 @@ row2 : entity work.mem(main)
 			wren => wren(2),
 			q => input_3);
 
+kirsch_calc : entity work.kirsch_calc(main)
+		port map(
+			a => a,
+			b => b,
+			c => c,
+			d => d,
+			e => e,
+			f => f,
+			g => g,
+			h => h,
+			i => i,
+			i_valid => i_valid,
+			i_clock => i_clock,
+			valid_shift => valid_shift,
+			o_valid => o_valid,
+			o_dir => o_dir,
+			o_edge => o_edge);
+
 with wren select
   c<=unsigned(input_2)   when s1,
      unsigned(input_3)   when s2,
@@ -110,7 +127,7 @@ with wren select
      unsigned(input_2)    when s3,
      "00000000"  when others;
 
-take_input <= unsigned(i_pixel);
+--take_input <= unsigned(i_pixel);
 
 -- reset_proc: process begin
 -- wait until rising_edge(i_clock);
@@ -151,7 +168,7 @@ elsif i_valid ='1' and row(8)='1' then
 
 elsif i_valid = '1' then
 	column <=column +1;
-	
+	e <= unsigned(i_pixel);
 	if row >= 2 then
 	--convolution table column shift
 	--column 2->1
@@ -161,9 +178,9 @@ elsif i_valid = '1' then
 	--column 3->2
 	b<=c;
 	i<=d;
-	f<=e;
+--	f<=e;
 	--update column 3
-	e<=take_input;
+	f<=e;
 	end if;
 	-- column and row control
 	if column = x"FF" then
