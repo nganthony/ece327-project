@@ -37,10 +37,10 @@ architecture main of kirsch is
 --signal insertion starts here
 signal column : unsigned(7 downto 0);
 signal row : unsigned(8 downto 0);
-signal a,b,c,d,e,f,g,h,i : unsigned(7 downto 0);
+signal a,b,c,d,e,f,g,h,i,buffer_c,buffer_d : unsigned(7 downto 0);
 signal input_1,input_2,input_3: std_logic_vector(7 downto 0);
 --signal take_input: unsigned( 7 downto 0);
-signal valid_shift: unsigned(0 to 7);
+signal valid_shift: unsigned(0 to 8);
 
 --Write/Read enable one hot encoding
 subtype wren_state is std_logic_vector(2 downto 0);
@@ -116,13 +116,13 @@ kirsch_calc : entity work.kirsch_calc(main)
 			o_edge => o_edge);
 
 with wren select
-  c<=unsigned(input_2)   when s1,
+  buffer_c<=unsigned(input_2)   when s1,
      unsigned(input_3)   when s2,
      unsigned(input_1)   when s3,
      "00000000"     when others;
 
 with wren select
-  d<=unsigned(input_3)    when s1,
+  buffer_d<=unsigned(input_3)    when s1,
      unsigned(input_1)    when s2,
      unsigned(input_2)    when s3,
      "00000000"  when others;
@@ -140,12 +140,12 @@ with wren select
 -- end process;
 
 valid_shift_proc: process
- variable v_s: unsigned(0 to 7);
+ variable v_s: unsigned(0 to 8);
 begin
 wait until rising_edge(i_clock);
 	v_s:= valid_shift srl 1;
 if i_reset='1' then
-	v_s:=x"00";
+	v_s:="000000000";
 elsif i_valid='1' then
 	v_s(0):='1';
 end if;
@@ -169,7 +169,7 @@ elsif i_valid ='1' and row(8)='1' then
 elsif i_valid = '1' then
 	column <=column +1;
 	e <= unsigned(i_pixel);
-	if row >= 2 then
+
 	--convolution table column shift
 	--column 2->1
 	a<=b;
@@ -181,7 +181,8 @@ elsif i_valid = '1' then
 --	f<=e;
 	--update column 3
 	f<=e;
-	end if;
+	c<=buffer_c;
+	d<=buffer_d;
 	-- column and row control
 	if column = x"FF" then
       row <= row + 1;
