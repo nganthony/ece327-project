@@ -9,6 +9,6 @@ add wave sim:/kirsch_tb/out_valid
 add wave sim:/kirsch_tb/out_edge
 add wave sim:/kirsch_tb/out_dir
 
-
+#run 60000 
 run 10600000 ns
 

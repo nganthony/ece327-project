@@ -15,5 +15,5 @@ xsys( "vlib work-msim")
 #------------------------------------------------------------------------
 # compile source files
 
-xsys( "uw-msim-com  kirsch_calc.vhd ")
+xsys( "uw-msim-com  mem.vhd kirsch_synth_pkg.vhd kirsch.vhd kirsch_calc.vhd max.vhd string_pkg.vhd kirsch_synth_pkg.vhd kirsch_unsynth_pkg.vhd kirsch_tb.vhd")
 

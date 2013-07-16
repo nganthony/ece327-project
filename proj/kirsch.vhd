@@ -42,6 +42,8 @@ signal input_1,input_2,input_3: std_logic_vector(7 downto 0);
 --signal take_input: unsigned( 7 downto 0);
 signal valid_shift: unsigned(0 to 8);
 
+signal valid_count: unsigned(7 downto 0);
+
 --Write/Read enable one hot encoding
 subtype wren_state is std_logic_vector(2 downto 0);
 	constant s0 : wren_state := "000";
@@ -156,11 +158,13 @@ end process;
 main_proc: process
 begin
 wait until rising_edge(i_clock);
+o_mode<="10";
 --reset
 if i_reset = '1' then
   column<=x"00";
   row<="000000000";
   wren <=s1;
+
 --consecutive matrix input
 elsif i_valid ='1' and row(8)='1' then
   column<=x"01";
@@ -189,7 +193,14 @@ elsif i_valid = '1' then
       column <= x"00";
       wren <= "rol"(wren, 1);
     end if;
+
 end if;
+
+end process;
+
+mode_proc: process
+begin
+wait until rising_edge(i_clock);
 
 end process;
   

@@ -20,15 +20,14 @@ n@_opt1
 R3
 R4
 T_opt2
-V_Z:z6k0FoaC`8[je>[;Ld3
+VoKIKe4>zIah`Gd9Ezo77T2
 R1
-=2-14dae9740792-51df4b39-4f9ac-aaa
+=6-c86000cefd1e-51e5b850-966c9-2e7b
 R2
 n@_opt2
 R3
-R4
 Eeight_bit_max
-Z5 w1373583808
+Z5 w1373839980
 Z6 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z7 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -40,9 +39,9 @@ L5
 V<W58X`aDimX4;>e2?5:Am2
 Z12 OL;C;10.1;51
 31
-Z13 !s108 1373583824.404989
-Z14 !s90 -93|+acc|-work|work-msim|max.vhd|
-Z15 !s107 max.vhd|
+Z13 !s108 1374009420.616056
+Z14 !s90 -reportprogress|300|-93|+acc|-work|work-msim|mem.vhd|kirsch_synth_pkg.vhd|kirsch.vhd|kirsch_calc.vhd|max.vhd|string_pkg.vhd|kirsch_synth_pkg.vhd|kirsch_unsynth_pkg.vhd|kirsch_tb.vhd|
+Z15 !s107 kirsch_tb.vhd|kirsch_unsynth_pkg.vhd|string_pkg.vhd|max.vhd|kirsch_calc.vhd|kirsch.vhd|kirsch_synth_pkg.vhd|mem.vhd|
 Z16 o-93 +acc -work work-msim
 Z17 tExplicit 1
 !s100 Ji9G`gC9QETTVjfAiHUC31
@@ -52,9 +51,9 @@ R6
 R7
 R8
 Z18 DEx4 work 13 eight_bit_max 0 22 <W58X`aDimX4;>e2?5:Am2
-l17
+l16
 L15
-VVYiXEWJzkg;mhcKH:`=XQ3
+VBf7Tz^:B6CLfmCW5Xag_P0
 R12
 31
 R13
@@ -62,7 +61,7 @@ R14
 R15
 R16
 R17
-!s100 WE4ZV^z<<k[]IkI;4Z7Ae1
+!s100 dV71Qh7RR3Pkhj]4P;ZkQ3
 !i10b 1
 Pfile_pkg
 R6
@@ -78,15 +77,15 @@ VgOUVm0_N_ATfV]2=@Fkaj2
 R12
 31
 b1
-Z22 !s108 1373588278.830156
-Z23 !s90 -reportprogress|300|-93|+acc|-work|work-msim|mem.vhd|kirsch_synth_pkg.vhd|kirsch.vhd|string_pkg.vhd|kirsch_synth_pkg.vhd|kirsch_unsynth_pkg.vhd|kirsch_tb.vhd|
-Z24 !s107 kirsch_tb.vhd|kirsch_unsynth_pkg.vhd|string_pkg.vhd|kirsch.vhd|kirsch_synth_pkg.vhd|mem.vhd|
+R13
+R14
+R15
 R16
 R17
 !s100 fNmL6N2@7_YEaQXG@Gd[31
 !i10b 1
 Bbody
-Z25 DPx4 work 8 file_pkg 0 22 gOUVm0_N_ATfV]2=@Fkaj2
+Z22 DPx4 work 8 file_pkg 0 22 gOUVm0_N_ATfV]2=@Fkaj2
 R6
 R7
 R8
@@ -95,114 +94,115 @@ L21
 V`OLoQIf5:hj^nDUeTjEeL0
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 nbody
 !s100 g:lfbMCK>>nPJKkD:3RF52
 !i10b 1
 Ekirsch
-Z26 w1373580232
+Z23 w1374009418
 R6
 R7
 R8
 R9
-Z27 8kirsch.vhd
-Z28 Fkirsch.vhd
+Z24 8kirsch.vhd
+Z25 Fkirsch.vhd
 l0
 L6
 V>gX`07a@9J<G3JlB=D_H_3
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 :iDD:oCA;]T0dBSJzJ9<d2
 !i10b 1
 Amain
-Z29 DEx4 work 11 kirsch_calc 0 22 bGgh>YDjaF;>WcnmZG<gb1
-Z30 DEx4 work 3 mem 0 22 4cBN7X^NS9z@6G`YU7m?71
+Z26 DEx4 work 11 kirsch_calc 0 22 @?R?3FNAN:Q?55SdfTW9i2
+Z27 DEx4 work 3 mem 0 22 4cBN7X^NS9z@6G`YU7m?71
 R6
 R7
 R8
-Z31 DEx4 work 6 kirsch 0 22 >gX`07a@9J<G3JlB=D_H_3
+Z28 DEx4 work 6 kirsch 0 22 >gX`07a@9J<G3JlB=D_H_3
 l62
 L36
-VM_z:WRAASJG?o94Q^[ZL72
+V[<9d?h^l8b@zn]PR@U_ca2
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
-!s100 E<<C^8d[80L;;E5Z9R0M=2
+!s100 LJm6^k>Yc1=R[;7TK1;3K0
 !i10b 1
 Ekirsch_calc
-Z32 w1373588476
+Z29 w1374008296
 R6
 R7
 R8
 R9
-Z33 8kirsch_calc.vhd
-Z34 Fkirsch_calc.vhd
+Z30 8kirsch_calc.vhd
+Z31 Fkirsch_calc.vhd
 l0
 L5
-VbGgh>YDjaF;>WcnmZG<gb1
-!s100 l3EZ1H@o3DaVe[>3`MRNO0
+V@?R?3FNAN:Q?55SdfTW9i2
 R12
 31
-!i10b 1
-Z35 !s108 1373588487.115545
-Z36 !s90 -93|+acc|-work|work-msim|kirsch_calc.vhd|
-Z37 !s107 kirsch_calc.vhd|
+R13
+R14
+R15
 R16
 R17
+!s100 C<fBJOInn10U1mZ[B6Y163
+!i10b 1
 Amain
+Z32 DEx4 work 11 ten_bit_max 0 22 CK9RUWKdi32WCFDmTCfWn2
 R18
 R6
 R7
 R8
-R29
-l38
+R26
+l48
 L17
-VCM5mzHGD;HeAInWaj9bmY1
-!s100 fS:D=4e`VZ:7GRT_o?Pel2
+VP7IO`;CllUCTTF5o_4C]>2
 R12
 31
-!i10b 1
-R35
-R36
-R37
+R13
+R14
+R15
 R16
 R17
+!s100 RJD`9AHfR5IckgUHc?C6?1
+!i10b 1
 Pkirsch_synth_pkg
 R6
 R7
 R8
 R19
 R9
-Z38 8kirsch_synth_pkg.vhd
-Z39 Fkirsch_synth_pkg.vhd
+Z33 8kirsch_synth_pkg.vhd
+Z34 Fkirsch_synth_pkg.vhd
 l0
 L12
 Vj<2H`53CXfXI]:;M@XHH03
 R12
 31
 b1
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 E2c8bVk]3QChFWTPbA:?k2
 !i10b 1
 Bbody
-Z40 DPx4 work 16 kirsch_synth_pkg 0 22 j<2H`53CXfXI]:;M@XHH03
+Z35 DPx4 work 16 kirsch_synth_pkg 0 22 j<2H`53CXfXI]:;M@XHH03
 R6
 R7
 R8
@@ -211,9 +211,9 @@ L69
 VJS2QfQ^KnPSS8H@m3z_K43
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 nbody
@@ -221,34 +221,34 @@ nbody
 !i10b 1
 Ekirsch_tb
 R19
-Z41 DPx4 work 10 string_pkg 0 22 D?RAj`>ORQzJG`OH4laVW0
-Z42 DPx4 work 18 kirsch_unsynth_pkg 0 22 <[f1DF]Z>1;;9VO_:RUVI3
-R25
-R40
+Z36 DPx4 work 10 string_pkg 0 22 D?RAj`>ORQzJG`OH4laVW0
+Z37 DPx4 work 18 kirsch_unsynth_pkg 0 22 <[f1DF]Z>1;;9VO_:RUVI3
+R22
+R35
 R6
 R7
 R8
 R9
-Z43 8kirsch_tb.vhd
-Z44 Fkirsch_tb.vhd
+Z38 8kirsch_tb.vhd
+Z39 Fkirsch_tb.vhd
 l0
 L23
 VffcC3a42Sd@@@RQdWC?153
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 Dg;9]1NDcY:56JnSH`PDB3
 !i10b 1
 Amain
-R31
-R41
-R42
-R25
-R40
+R28
+R36
+R37
+R22
+R35
 R6
 R7
 R8
@@ -258,17 +258,17 @@ L32
 VYAm=]6k4NjgJ:bEdDf_9C2
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 mgMje[4SVRza0jAX_^I_j1
 !i10b 1
 Pkirsch_unsynth_pkg
-R40
-R25
-R41
+R35
+R22
+R36
 R6
 R7
 R8
@@ -282,18 +282,18 @@ V<[f1DF]Z>1;;9VO_:RUVI3
 R12
 31
 b1
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 N6dC_oPhdVCNI7oQafonY0
 !i10b 1
 Bbody
-R42
-R40
-R25
-R41
+R37
+R35
+R22
+R36
 R6
 R7
 R8
@@ -302,9 +302,9 @@ L122
 VVI_@P1=]SKjPe;PU]Y;lb3
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 nbody
@@ -316,16 +316,16 @@ R6
 R7
 R8
 R9
-Z45 8mem.vhd
-Z46 Fmem.vhd
+Z40 8mem.vhd
+Z41 Fmem.vhd
 l0
 L23
 V4cBN7X^NS9z@6G`YU7m?71
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 ?LGTE@1?7>>fLX8VA@:P;2
@@ -334,15 +334,15 @@ Amain
 R6
 R7
 R8
-R30
+R27
 l47
 L37
 VUm7kBM=d44angbXHf[le32
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 CM=c^iWbEL4Id@2NI`R@[0
@@ -352,23 +352,23 @@ R7
 R8
 R19
 R9
-Z47 8string_pkg.vhd
-Z48 Fstring_pkg.vhd
+Z42 8string_pkg.vhd
+Z43 Fstring_pkg.vhd
 l0
 L7
 VD?RAj`>ORQzJG`OH4laVW0
 R12
 31
 b1
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 !s100 _ICo9Mj3cbo8Iczzj59GY3
 !i10b 1
 Bbody
-R41
+R36
 R7
 R8
 l0
@@ -376,11 +376,48 @@ L17
 VZIP2I8Skf`_0>f2`90Y:P3
 R12
 31
-R22
-R23
-R24
+R13
+R14
+R15
 R16
 R17
 nbody
 !s100 9Wz]?2O2`PLX2Z;IcUdzG2
+!i10b 1
+Eten_bit_max
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+l0
+L40
+VCK9RUWKdi32WCFDmTCfWn2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 8j_kkc3W54eS9]IiW<<7U3
+!i10b 1
+Amain
+R6
+R7
+R8
+R32
+l51
+L50
+VAT3@b=T[VPSPMaY8K@ZbR1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 TZP]hb`Oi_;RPXD^4]3iY2
 !i10b 1
