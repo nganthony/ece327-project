@@ -1,15 +1,18 @@
 Warning: vmap will not overwrite local modelsim.ini.
 Warning: Library already exists at "work-msim".
-Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
-Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
--- Loading package STANDARD
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package NUMERIC_STD
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+Model Technology ModelSim SE-64 vlog 10.1 Compiler 2011.12 Dec  5 2011
+-- Compiling module top_kirsch_chip
+-- Compiling module top_kirsch_chip
+
+
+Top level modules:
+Top level modules:
+	top_kirsch_chip
+	top_kirsch_chip
+ 
+ INFO: physical-synthesis              result written to top_kirsch_chip.vho
+ NUMERIC_STD
 -- Compiling entity mem
 -- Compiling entity mem
 -- Compiling architecture main of mem
@@ -26,8 +29,30 @@ Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
 -- Compiling architecture main of kirsch
 -- Loading entity mem
 -- Loading entity mem
+-- Loading package vl_types
+-- Loading package vl_types
 -- Loading entity kirsch_calc
 -- Loading entity kirsch_calc
+-- Compiling entity UARTS
+-- Compiling entity UARTS
+-- Compiling architecture RTL of UARTS
+-- Compiling architecture RTL of UARTS
+-- Compiling entity uw_uart
+-- Compiling entity uw_uart
+-- Compiling architecture main of uw_uart
+-- Compiling architecture main of uw_uart
+-- Loading entity UARTS
+-- Loading entity UARTS
+-- Loading package kirsch_synth_pkg
+-- Loading package kirsch_synth_pkg
+-- Compiling entity top_kirsch
+-- Compiling entity top_kirsch
+-- Compiling architecture main of top_kirsch
+-- Compiling architecture main of top_kirsch
+-- Loading entity uw_uart
+-- Loading entity uw_uart
+-- Loading entity kirsch
+-- Loading entity kirsch
 -- Compiling entity kirsch_calc
 -- Compiling entity kirsch_calc
 -- Compiling architecture main of kirsch_calc
@@ -44,42 +69,4 @@ Model Technology ModelSim SE-64 vcom 10.1 Compiler 2011.12 Dec  5 2011
 -- Compiling entity ten_bit_max
 -- Compiling architecture main of ten_bit_max
 -- Compiling architecture main of ten_bit_max
--- Compiling package string_pkg
--- Compiling package string_pkg
--- Compiling package body string_pkg
--- Compiling package body string_pkg
--- Loading package string_pkg
--- Loading package string_pkg
--- Compiling package kirsch_synth_pkg
--- Compiling package kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Compiling package body kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Compiling package file_pkg
--- Compiling package file_pkg
--- Compiling package body file_pkg
--- Compiling package body file_pkg
--- Loading package file_pkg
--- Loading package file_pkg
--- Loading package string_pkg
--- Loading package string_pkg
--- Loading package file_pkg
--- Loading package file_pkg
--- Loading package kirsch_synth_pkg
--- Loading package kirsch_synth_pkg
--- Compiling package kirsch_unsynth_pkg
--- Compiling package kirsch_unsynth_pkg
--- Compiling package body kirsch_unsynth_pkg
--- Compiling package body kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Loading package kirsch_unsynth_pkg
--- Compiling entity kirsch_tb
--- Compiling entity kirsch_tb
--- Compiling architecture main of kirsch_tb
--- Compiling architecture main of kirsch_tb
--- Loading entity kirsch
--- Loading entity kirsch
  

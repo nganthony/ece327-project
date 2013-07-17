@@ -129,6 +129,7 @@ with wren select
      unsigned(input_2)    when s3,
      "00000000"  when others;
 
+o_row <= std_logic_vector(row(7 downto 0));
 --take_input <= unsigned(i_pixel);
 
 -- reset_proc: process begin
@@ -158,7 +159,6 @@ end process;
 main_proc: process
 begin
 wait until rising_edge(i_clock);
-o_mode<="10";
 --reset
 if i_reset = '1' then
   column<=x"00";
@@ -201,6 +201,15 @@ end process;
 mode_proc: process
 begin
 wait until rising_edge(i_clock);
+if i_reset = '1' then
+ o_mode<="01";
+else
+	if (row(7 downto 0)=0 and column=0 and i_valid='0' and valid_shift=0) then
+		o_mode<="10";
+	else
+		o_mode<="11";
+	end if;
+end if;
 
 end process;
   

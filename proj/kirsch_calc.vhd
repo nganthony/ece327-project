@@ -61,7 +61,6 @@ stage_1_8bit_maxer: entity work.eight_bit_max(main)
 			
 stage_3_10bit_maxer: entity work.ten_bit_max(main)
 			port map(
-			i_clock=>i_clock,
 			i_src1=>r9,
 			i_src2=>r7,
 			i_dir1=>dir3,
