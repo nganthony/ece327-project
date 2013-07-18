@@ -24,7 +24,7 @@ subtype direction is std_logic_vector(2 downto 0);
 	constant SE: direction := "101";
 	constant S: direction := "011";
 	constant SW: direction := "111";
-	
+
 --registers and other signals
 	--global direction register
 	signal max_dir_buffer,dir_max,dir_reg1,dir_reg2, dir_reg3,dir_reg4,dir_max_stg3: direction;
@@ -43,8 +43,8 @@ subtype direction is std_logic_vector(2 downto 0);
 
 	--stage 4 signal
 	signal r10: signed (14 downto 0);
+	signal buffer1: direction;
 
-	
 begin
 
 --max module used in stage 1
@@ -58,7 +58,7 @@ stage_1_8bit_maxer: entity work.eight_bit_max(main)
 			o_dir=>dir_max,
 			o_max=>r5
 			);
-			
+
 stage_3_10bit_maxer: entity work.ten_bit_max(main)
 			port map(
 			i_src1=>r9,
@@ -71,7 +71,7 @@ stage_3_10bit_maxer: entity work.ten_bit_max(main)
 
 stage_1_proc: process
 	variable valid_check: unsigned(0 to 8);
-	
+
 begin
 wait until rising_edge(i_clock);
 	--go ahead in time
@@ -134,12 +134,12 @@ begin
 wait until rising_edge(i_clock);
 	-- go ahead in time
 		valid_check2 := valid_shift srl 1;
-	
+
 	-- shifting
 	if valid_check2(6)='1' then
 		for_shift:=r8&'0';
 	end if;
-	
+
 	-- r8
 	if valid_check2(2)='1' then
 		r8<="0000"&r6;
@@ -148,21 +148,21 @@ wait until rising_edge(i_clock);
 	else
 		r8<=("0000"&r6)+r8;
 	end if;
-	
+
 	if valid_check2(6)='1' then
 		r8_buffer<=for_shift + ('0'&r8);
 	end if;
-	
+
 	-- r9
 	if valid_check2(3)='1' then
 		r9<=r7;
-	elsif valid_check2(4)='1' then
-		r9<=r9;
+--	elsif valid_check2(4)='1' then
+	--	r9<=r9;
 	else
-		
+
 		r9<=stg3_max_result;
 	end if;
-	
+
 end process;
 
 
@@ -174,15 +174,16 @@ begin
 wait until rising_edge(i_clock);
 -- go ahead in time
 	valid_check3 := valid_shift srl 1;
-	
+
 	o_valid <= '0';
+	--max_dir_buffer <= buffer1;
 	o_dir<=max_dir_buffer;
 	if valid_check3(7)='1' then
 		eighttimesr9:='0'&r9&"000";
 		--r10<=signed('0'&eighttimesr9)-signed('0'&r8_buffer);
 		r10<=signed('0'&eighttimesr9-('0'&r8_buffer));
 	end if;
-	
+
 	if valid_check3(8)='1' then
 		o_valid <= '1';
 		if r10>383 then
@@ -191,8 +192,8 @@ wait until rising_edge(i_clock);
 			o_edge <= '0';
 		end if;
 	end if;	
-		
-	
+
+
 end process;
 
 
@@ -204,14 +205,14 @@ valid_check4 := valid_shift srl 1;
 
 if valid_check4(3)='1' then
 	dir3<=dir_reg1;
-	dir4<=dir_reg2;
+	dir4<=dir_max;
 
 elsif valid_check4(4)='1' then
 	dir3<=dir_max_stg3;
-	dir4<=dir_reg3;
+	dir4<=dir_max;
 elsif valid_check4(5)='1' then
 	dir3<=dir_max_stg3;
-	dir4<=dir_reg4;
+	dir4<=dir_max;
 elsif valid_check4(6)='1' then
 	max_dir_buffer<=dir_max_stg3;
 end if;
